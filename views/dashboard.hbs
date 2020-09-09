@@ -1,1 +1,17 @@
 <h3>Dashboard</h3>
+
+{{#if stories}}
+<ul>
+
+    {{#each stories}}
+    <li> <a href="/stories/{{_id}}">
+
+            {{title}}
+        </a> </li>
+    <li> {{formateDate createdAt 'MMMM Do YYYY, h:mm:ss a'}} </li>
+    <li><span>{{status}}</span></li>
+    {{/each}}
+</ul>
+{{else}}
+no stories f
+{{/if}}
